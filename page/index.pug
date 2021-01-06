@@ -4,8 +4,22 @@ html.page(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title LaslesVpn
+    link(rel="stylesheet", href="./index.css")
   body.page__body
-    header.header
+    header.header.page__header
+      .logo
+        img.logo__img(src="../images/logo.svg", alt="LaslesVpn")
+        p.logo__title Lasles
+        span.logo__span vpn
+      nav.nav
+        a.nav__link(href="#") About
+        a.nav__link(href="#") Features
+        a.nav__link(href="#") Pricing
+        a.nav__link(href="#") Testimonials
+        a.nav__link(href="#") Help
+      .header__sign
+        button.button.button__type_sign-in Sign In
+        button.button.button__type_sign-up Sign Up
     main.content
       section.view
       section.features
