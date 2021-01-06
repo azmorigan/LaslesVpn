@@ -368,6 +368,10 @@ template {
   max-width: 1140px;
   margin: auto;
 }
+.page__content {
+  margin: auto;
+  max-width: 1200px;
+}
 
 .header {
   padding: 45px 0 88px;
@@ -433,4 +437,26 @@ template {
   border: none;
   padding: 0;
   margin-right: 30px;
+}
+
+.view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.view__title {
+  display: inline;
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 500;
+  max-width: 555px;
+}
+.view__span {
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 700;
+}
+.view__img {
+  width: 611px;
+  height: 382px;
 }
