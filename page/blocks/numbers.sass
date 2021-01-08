@@ -1,0 +1,56 @@
+.numbers
+  max-width: 1140px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  margin: 0 auto 95px
+  box-shadow: 0 25px 54px rgba(13, 16, 37, 0.06)
+  border-radius: 10px
+  font-size: 0
+
+  &__item
+    display: grid
+    justify-content: center
+    align-items: center
+    padding: 67px 0
+    grid-template-columns: repeat(2, minmax(min-content, max-content))
+    grid-template-rows: 1fr 1fr
+    column-gap: 36px
+    row-gap: 5px
+    width: 376px
+    position: relative
+    &::after
+      margin: 0
+      padding: 0
+      display: inline-block
+      content: ''
+      height: 125px
+      border-right: 2px solid #eeeff2
+      position: absolute
+      top: 37px
+      left: 376px
+      box-sizing: border-box
+
+    &:last-child
+      border-right: none
+      &::after
+        display: none
+
+  &__img
+    width: 55px
+    height: 55px
+    grid-row: 1/3
+
+    &_type_user
+      background: url(../../images/icon_user.svg) no-repeat center
+    &_type_location
+      background: url(../../images/icon_location.svg) no-repeat center
+    &_type_server
+      background: url(../../images/icon_server.svg) no-repeat center
+
+  &__title
+    @extend %numb
+
+  &__subtitle
+    @extend %logo

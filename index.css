@@ -355,12 +355,19 @@ template {
   font-weight: 700;
   src: local(""), url("./fonts/rubik-v11-latin-700.woff2") format("woff2"), url("./fonts/rubik-v11-latin-700.woff") format("woff");
 }
-.view__subtitle-span, .view__subtitle, .button, .nav__link, .logo__span, .logo__title {
+.view__subtitle-span, .view__subtitle, .button, .nav__link, .numbers__subtitle, .logo__span, .logo__title, .numbers__title {
   margin: 0;
   padding: 0;
 }
 
-.logo__span, .logo__title {
+.numbers__title {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #0B132A;
+}
+
+.numbers__subtitle, .logo__span, .logo__title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
@@ -448,6 +455,7 @@ template {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 .view__title {
   display: inline;
@@ -486,4 +494,60 @@ template {
 }
 .view__button:hover {
   filter: saturate(80%);
+}
+
+.numbers {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 95px;
+  box-shadow: 0 25px 54px rgba(13, 16, 37, 0.06);
+  border-radius: 10px;
+  font-size: 0;
+}
+.numbers__item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 67px 0;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  grid-template-rows: 1fr 1fr;
+  column-gap: 36px;
+  row-gap: 5px;
+  width: 376px;
+  position: relative;
+}
+.numbers__item::after {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  content: "";
+  height: 125px;
+  border-right: 2px solid #eeeff2;
+  position: absolute;
+  top: 37px;
+  left: 376px;
+  box-sizing: border-box;
+}
+.numbers__item:last-child {
+  border-right: none;
+}
+.numbers__item:last-child::after {
+  display: none;
+}
+.numbers__img {
+  width: 55px;
+  height: 55px;
+  grid-row: 1/3;
+}
+.numbers__img_type_user {
+  background: url(../../images/icon_user.svg) no-repeat center;
+}
+.numbers__img_type_location {
+  background: url(../../images/icon_location.svg) no-repeat center;
+}
+.numbers__img_type_server {
+  background: url(../../images/icon_server.svg) no-repeat center;
 }
