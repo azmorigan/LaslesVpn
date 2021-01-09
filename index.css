@@ -355,9 +355,16 @@ template {
   font-weight: 700;
   src: local(""), url("./fonts/rubik-v11-latin-700.woff2") format("woff2"), url("./fonts/rubik-v11-latin-700.woff") format("woff");
 }
-.view__subtitle-span, .view__subtitle, .button, .nav__link, .numbers__subtitle, .logo__span, .logo__title, .numbers__title {
+.features__list-item, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link, .numbers__subtitle, .logo__span, .logo__title, .numbers__title, .features__title {
   margin: 0;
   padding: 0;
+}
+
+.features__title {
+  font-size: 35px;
+  line-height: 50px;
+  font-weight: 500;
+  color: #0B132A;
 }
 
 .numbers__title {
@@ -374,8 +381,15 @@ template {
   color: #0B132A;
 }
 
-.view__subtitle-span, .view__subtitle, .button, .nav__link {
+.features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link {
   font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #4F5665;
+}
+
+.features__list-item {
+  font-size: 14px;
   line-height: 30px;
   font-weight: 400;
   color: #4F5665;
@@ -550,4 +564,37 @@ template {
 }
 .numbers__img_type_server {
   background: url(../../images/icon_server.svg) no-repeat center;
+}
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 130px;
+}
+.features__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  max-width: 440px;
+}
+.features__title {
+  max-width: 383px;
+  margin-bottom: 20px;
+}
+.features__subtitle {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.features__list-item {
+  margin-bottom: 15px;
+  background-image: url("../images/check_fill.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
 }
