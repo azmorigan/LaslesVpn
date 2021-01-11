@@ -1,0 +1,29 @@
+.plan
+  width: 100%
+  background-color: #fbfbfb
+  padding: 80px 0 150px
+  box-sizing: border-box
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(3, minmax(min-content, max-content))
+    column-gap: 50px
+    justify-items: center
+    align-items: center
+    max-width: 1090px
+    margin: auto
+    box-sizing: border-box
+
+  &__title
+    text-align: center
+    grid-column: 1/4
+    @extend %title
+    margin-bottom: 20px
+
+  &__subtitle
+    max-width: 555px
+    text-align: center
+    grid-column: 1/4
+    @extend %text
+    margin-bottom: 60px

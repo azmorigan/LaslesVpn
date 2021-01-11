@@ -1,0 +1,66 @@
+.card
+  background: #fff
+  box-sizing: border-box
+  border: 2px solid #fdfdfd
+  border-radius: 10px
+  padding: 80px 70px 50px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  &_name_standart
+    border-color: #ddd
+  &_name_premium
+    border-color: #f53838
+
+  &__img
+    width: 145px
+    height: 165px
+
+  &__title
+    @extend %subtitle
+    margin: 30px 0
+    text-align: center
+
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    &_type_free
+      margin-bottom: 130px
+    &_type_standart
+      margin-bottom: 90px
+    &_type_premium
+      margin-bottom: 50px
+    &-item
+      @extend %list
+      background-image: url('../images/check.svg')
+      background-position: left center
+      background-repeat: no-repeat
+      padding-left: 35px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+
+  &__price
+    @extend %numb
+    margin-bottom: 20px
+    text-align: center
+    &-span
+      color: #4F5665
+      font-weight: 400
+
+  &__button
+    @extend %text
+    border: 2px solid #F53838
+    box-sizing: border-box
+    border-radius: 50px
+    padding: 8px 63px
+    color: #F53838
+    font-weight: 700
+    cursor: pointer
+    &:hover
+      background: #F53838
+      color: #fff
+      box-shadow: 0 25px 54px rgba(245, 56, 56, 0.35)
