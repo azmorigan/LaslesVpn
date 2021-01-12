@@ -1,0 +1,32 @@
+.global
+  width: 100%
+  background-color: #fbfbfb
+  box-sizing: border-box
+
+  &__container
+    max-width: 1135px
+    margin: auto
+
+  &__title
+    @extend %title
+    text-align: center
+    max-width: 383px
+    margin: 0 auto 20px
+
+  &__text
+    @extend %text
+    margin: 0 auto 155px
+    max-width: 555px
+    text-align: center
+    &-span
+      font-weight: 500
+
+  &__img
+    display: block
+    width: 1060px
+    height: auto
+    object-fit: cover
+    margin: 0 auto 35px
+
+  &__partners
+    margin-bottom: 50px

@@ -355,12 +355,12 @@ template {
   font-weight: 700;
   src: local(""), url("./fonts/rubik-v11-latin-700.woff2") format("woff2"), url("./fonts/rubik-v11-latin-700.woff") format("woff");
 }
-.card__list-item, .features__list-item, .card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link, .card__title, .numbers__subtitle, .logo__span, .logo__title, .card__price, .numbers__title, .plan__title, .features__title {
+.card__list-item, .features__list-item, .global__text, .card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link, .card__title, .numbers__subtitle, .logo__span, .logo__title, .card__price, .numbers__title, .global__title, .plan__title, .features__title {
   margin: 0;
   padding: 0;
 }
 
-.plan__title, .features__title {
+.global__title, .plan__title, .features__title {
   font-size: 35px;
   line-height: 50px;
   font-weight: 500;
@@ -388,7 +388,7 @@ template {
   color: #0B132A;
 }
 
-.card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link {
+.global__text, .card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link {
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
@@ -706,4 +706,49 @@ template {
   background: #F53838;
   color: #fff;
   box-shadow: 0 25px 54px rgba(245, 56, 56, 0.35);
+}
+
+.global {
+  width: 100%;
+  background-color: #fbfbfb;
+  box-sizing: border-box;
+}
+.global__container {
+  max-width: 1135px;
+  margin: auto;
+}
+.global__title {
+  text-align: center;
+  max-width: 383px;
+  margin: 0 auto 20px;
+}
+.global__text {
+  margin: 0 auto 155px;
+  max-width: 555px;
+  text-align: center;
+}
+.global__text-span {
+  font-weight: 500;
+}
+.global__img {
+  display: block;
+  width: 1060px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto 35px;
+}
+.global__partners {
+  margin-bottom: 50px;
+}
+
+.partners {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1135px;
+}
+.partners__img {
+  object-fit: cover;
 }
