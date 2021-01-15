@@ -801,7 +801,7 @@ template {
   cursor: pointer;
 }
 .reviews__button:hover, .reviews__button:focus, .reviews__button:active {
-  output: none;
+  outline: none;
 }
 .reviews__button_line_left {
   top: 220px;
