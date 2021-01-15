@@ -1,0 +1,31 @@
+.reviews
+  width: 100%
+  background-color: #fbfbfb
+  box-sizing: border-box
+  margin: 50px 0 180px
+  overflow: hidden
+
+  &__wrapper
+    max-width: 1135px
+    margin: auto
+
+  &__title
+    @extend %title
+    text-align: center
+    max-width: 447px
+    margin: 0 auto 20px
+
+  &__text
+    @extend %text
+    margin: 0 auto 60px
+    max-width: 555px
+    text-align: center
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(4, minmax(min-content, max-content))
+    grid-template-rows: minmax(min-content, max-content)
+    column-gap: 50px
+    transition: transform 1s ease
+    &:hover
+      transform: translate(-300px)

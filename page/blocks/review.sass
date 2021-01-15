@@ -1,0 +1,47 @@
+.review
+  width: 400px
+  padding: 30px
+  border: 2px solid #ddd
+  box-sizing: border-box
+  border-radius: 10px
+  display: grid
+  grid-template-columns: minmax(min-content, max-content) 1fr repeat(2, minmax(min-content, max-content))
+  grid-template-rows: repeat(3, minmax(min-content, max-content))
+  justify-items: start
+  align-items: center
+  background-color: #fff
+  &:hover
+    border: 2px solid #F53838
+  &__avatar
+    width: 50px
+    height: 50px
+    object-fit: cover
+    border-radius: 50%
+    grid-row: 1/3
+
+  &__name
+    @extend %subtitle
+    grid-row: 1/2
+    padding-left: 20px
+    align-self: end
+    margin-bottom: -3px
+
+  &__location
+    @extend %list
+    grid-row: 2/3
+    padding-left: 20px
+    align-self: start
+    margin-top: -3px
+
+  &__rating
+    @extend %text
+    grid-row: 1/3
+    margin-right: 10px
+
+  &__star
+    grid-row: 1/3
+
+  &__text
+    @extend %text
+    grid-column: 1/5
+    margin-top: 20px

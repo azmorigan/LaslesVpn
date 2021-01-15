@@ -11,7 +11,7 @@ html.page(lang="en")
 
     header.header.page__header
       .logo
-        img.logo__img(src="../images/logo.svg", alt="LaslesVpn")
+        img.logo__img(src="./images/logo.svg", alt="LaslesVpn")
         p.logo__title Lasles
         span.logo__span vpn
       nav.nav
@@ -32,7 +32,7 @@ html.page(lang="en")
           span.view__title-span LaslesVPN.
           p.view__subtitle Provide a network for all your needs with ease and fun using #[span.view__subtitle-span LaslesVPN] discover interesting features from us.
           button.view__button.button Get Started
-        img.view__img(src="../images/view.jpg", alt="Using LaslesVpn")
+        img.view__img(src="./images/view.jpg", alt="Using LaslesVpn")
 
       section.numbers
         .numbers__item
@@ -49,7 +49,7 @@ html.page(lang="en")
           p.numbers__subtitle Servers
     
       section.features
-        img.features__img(src="../images/features.jpg", alt="Features")
+        img.features__img(src="./images/features.jpg", alt="Features")
         .features__info
           h2.features__title We Provide Many Features You Can Use
           p.features__subtitle You can explore the features that we provide with fun and have their own functions each feature.
@@ -65,7 +65,7 @@ html.page(lang="en")
           p.plan__subtitle Let's choose the package that is best for you and explore it happily and cheerfully.
 
           article.card.card_name_free
-            img.card__img(src="../images/free.jpg", alt="Free")
+            img.card__img(src="./images/free.jpg", alt="Free")
             h3.card__title Free Plan
             ul.card__list.card__list_type_free
               li.card__list-item Unlimited Bandwitch
@@ -76,7 +76,7 @@ html.page(lang="en")
             button.button.card__button Select
 
           article.card.card_name_standart
-            img.card__img(src="../images/standart.jpg", alt="Standart")
+            img.card__img(src="./images/standart.jpg", alt="Standart")
             h3.card__title Standard Plan
             ul.card__list.card__list_type_standart
               li.card__list-item Unlimited Bandwitch
@@ -88,7 +88,7 @@ html.page(lang="en")
             button.button.card__button Select
 
           article.card.card_name_premium
-            img.card__img(src="../images/premium.jpg", alt="Premium")
+            img.card__img(src="./images/premium.jpg", alt="Premium")
             h3.card__title Premium Plan
             ul.card__list.card__list_type_premium
               li.card__list-item Unlimited Bandwitch
@@ -104,14 +104,46 @@ html.page(lang="en")
         .global__container
           h2.global__title Huge Global Network of Fast VPN
           p.global__text See #[span.global__text-span LaslesVPN] everywhere to make it easier for you when you move locations.
-          img.global__img(src="../images/map.png", alt="Global Network of VPN")
+          img.global__img(src="./images/map.png", alt="Global Network of VPN")
           .partners.global__partners
-            img.partners__img(src="../images/netflix.svg", alt="Netflix")
-            img.partners__img(src="../images/reddit.svg",   alt="Reddit")
-            img.partners__img(src="../images/amazon.svg", alt="Amazon")
-            img.partners__img(src="../images/discord.svg", alt="Discord")
-            img.partners__img(src="../images/spotify.svg", alt="Spotify")
+            img.partners__img(src="./images/netflix.svg", alt="Netflix")
+            img.partners__img(src="./images/reddit.svg",   alt="Reddit")
+            img.partners__img(src="./images/amazon.svg", alt="Amazon")
+            img.partners__img(src="./images/discord.svg", alt="Discord")
+            img.partners__img(src="./images/spotify.svg", alt="Spotify")
 
       section.reviews
+        .reviews__wrapper
+          h2.reviews__title Trusted by Thousands of Happy Customer
+          p.reviews__text These are the stories of our customers who have joined us with great pleasure when using this crazy feature.
+          .reviews__container
+            .review
+              img.review__avatar(src="../images/review_robert.jpg", alt="Robert")
+              h3.review__name Viezh Robert
+              p.review__location Warsaw, Poland
+              p.review__rating 4.5
+              img.review__star(src="../images/star.svg", alt="Star")
+              p.review__text “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best.”
+            .review
+              img.review__avatar(src="../images/review_christy.jpg", alt="Christy")
+              h3.review__name Yessica Christy
+              p.review__location Shanxi, China
+              p.review__rating 4.5
+              img.review__star(src="../images/star.svg", alt="Star")
+              p.review__text “I like it because I like to travel far and still can connect with high speed.”
+            .review
+              img.review__avatar(src="../images/review_jou.jpg", alt="Jou")
+              h3.review__name Kim Young Jou
+              p.review__location Seoul, South Korea
+              p.review__rating 4.5
+              img.review__star(src="../images/star.svg", alt="Star")
+              p.review__text “This is very unusual for my business that currently requires a virtual private network that has high security.”.
+            .review
+              img.review__avatar(src="../images/review_smith.jpg", alt="Smith")
+              h3.review__name Mr.Smith
+              p.review__location London
+              p.review__rating 4.6
+              img.review__star(src="../images/star.svg", alt="Star")
+              p.review__text “Huuuuuuuuuuuuuuuuuuge service.”
 
     footer.footer

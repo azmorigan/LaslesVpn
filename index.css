@@ -355,12 +355,12 @@ template {
   font-weight: 700;
   src: local(""), url("./fonts/rubik-v11-latin-700.woff2") format("woff2"), url("./fonts/rubik-v11-latin-700.woff") format("woff");
 }
-.card__list-item, .features__list-item, .global__text, .card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link, .card__title, .numbers__subtitle, .logo__span, .logo__title, .card__price, .numbers__title, .global__title, .plan__title, .features__title {
+.review__location, .card__list-item, .features__list-item, .review__text, .review__rating, .reviews__text, .global__text, .card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link, .review__name, .card__title, .numbers__subtitle, .logo__span, .logo__title, .card__price, .numbers__title, .reviews__title, .global__title, .plan__title, .features__title {
   margin: 0;
   padding: 0;
 }
 
-.global__title, .plan__title, .features__title {
+.reviews__title, .global__title, .plan__title, .features__title {
   font-size: 35px;
   line-height: 50px;
   font-weight: 500;
@@ -381,21 +381,21 @@ template {
   color: #0B132A;
 }
 
-.card__title {
+.review__name, .card__title {
   font-size: 18px;
   line-height: 30px;
   font-weight: 500;
   color: #0B132A;
 }
 
-.global__text, .card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link {
+.review__text, .review__rating, .reviews__text, .global__text, .card__button, .plan__subtitle, .features__subtitle, .view__subtitle-span, .view__subtitle, .button, .nav__link {
   font-size: 16px;
   line-height: 30px;
   font-weight: 400;
   color: #4F5665;
 }
 
-.card__list-item, .features__list-item {
+.review__location, .card__list-item, .features__list-item {
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -462,12 +462,20 @@ template {
   border: 1px solid #F53855;
   box-sizing: border-box;
   border-radius: 50px;
+  cursor: pointer;
 }
 .button__type_sign-in {
   color: #0B132A;
   border: none;
   padding: 0;
   margin-right: 30px;
+}
+.button__type_sign-in:hover {
+  color: red;
+}
+.button__type_sign-up:hover {
+  background-color: #F53855;
+  color: #fff;
 }
 
 .view {
@@ -737,9 +745,6 @@ template {
   object-fit: cover;
   margin: 0 auto 35px;
 }
-.global__partners {
-  margin-bottom: 50px;
-}
 
 .partners {
   display: flex;
@@ -751,4 +756,83 @@ template {
 }
 .partners__img {
   object-fit: cover;
+}
+
+.reviews {
+  width: 100%;
+  background-color: #fbfbfb;
+  box-sizing: border-box;
+  margin: 50px 0 180px;
+  overflow: hidden;
+}
+.reviews__wrapper {
+  max-width: 1135px;
+  margin: auto;
+}
+.reviews__title {
+  text-align: center;
+  max-width: 447px;
+  margin: 0 auto 20px;
+}
+.reviews__text {
+  margin: 0 auto 60px;
+  max-width: 555px;
+  text-align: center;
+}
+.reviews__container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-template-rows: minmax(min-content, max-content);
+  column-gap: 50px;
+  transition: transform 1s ease;
+}
+.reviews__container:hover {
+  transform: translate(-300px);
+}
+
+.review {
+  width: 400px;
+  padding: 30px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) 1fr repeat(2, minmax(min-content, max-content));
+  grid-template-rows: repeat(3, minmax(min-content, max-content));
+  justify-items: start;
+  align-items: center;
+  background-color: #fff;
+}
+.review:hover {
+  border: 2px solid #F53838;
+}
+.review__avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  grid-row: 1/3;
+}
+.review__name {
+  grid-row: 1/2;
+  padding-left: 20px;
+  align-self: end;
+  margin-bottom: -3px;
+}
+.review__location {
+  grid-row: 2/3;
+  padding-left: 20px;
+  align-self: start;
+  margin-top: -3px;
+}
+.review__rating {
+  grid-row: 1/3;
+  margin-right: 10px;
+}
+.review__star {
+  grid-row: 1/3;
+}
+.review__text {
+  grid-column: 1/5;
+  margin-top: 20px;
 }
