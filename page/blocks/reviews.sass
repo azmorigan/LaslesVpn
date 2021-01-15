@@ -2,8 +2,9 @@
   width: 100%
   background-color: #fbfbfb
   box-sizing: border-box
-  margin: 50px 0 180px
+  padding: 50px 0 180px
   overflow: hidden
+  position: relative
 
   &__wrapper
     max-width: 1135px
@@ -23,9 +24,37 @@
 
   &__container
     display: grid
-    grid-template-columns: repeat(4, minmax(min-content, max-content))
+    grid-template-columns: repeat(5, minmax(min-content, max-content))
     grid-template-rows: minmax(min-content, max-content)
     column-gap: 50px
-    transition: transform 1s ease
-    &:hover
-      transform: translate(-300px)
+    transition: transform 1.5s ease
+
+  &__button
+    width: 60px
+    height: 60px
+    border: 2px solid #F53838
+    box-sizing: border-box
+    border-radius: 50%
+    background-image: url(../images/arrow.svg)
+    background-position: center
+    background-repeat: no-repeat
+    background-color: #fff
+    position: absolute
+    cursor: pointer
+    &:hover, &:focus, &:active
+      output: none
+
+    &_line_left
+      top: 220px
+      left: 510px
+      &:hover
+        background-color: #F53838
+        background-image: url(../images/arrow_hover.svg)
+
+    &_line_right
+      top: 220px
+      left: 960px
+      background-image: url(../images/arrow_right.svg)
+      &:hover
+        background-color: #F53838
+        background-image: url(../images/arrow_right_hover.svg)

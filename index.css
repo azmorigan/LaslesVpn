@@ -762,8 +762,9 @@ template {
   width: 100%;
   background-color: #fbfbfb;
   box-sizing: border-box;
-  margin: 50px 0 180px;
+  padding: 50px 0 180px;
   overflow: hidden;
+  position: relative;
 }
 .reviews__wrapper {
   max-width: 1135px;
@@ -781,13 +782,43 @@ template {
 }
 .reviews__container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-template-columns: repeat(5, minmax(min-content, max-content));
   grid-template-rows: minmax(min-content, max-content);
   column-gap: 50px;
-  transition: transform 1s ease;
+  transition: transform 1.5s ease;
 }
-.reviews__container:hover {
-  transform: translate(-300px);
+.reviews__button {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #F53838;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-image: url(../images/arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+}
+.reviews__button:hover, .reviews__button:focus, .reviews__button:active {
+  output: none;
+}
+.reviews__button_line_left {
+  top: 220px;
+  left: 510px;
+}
+.reviews__button_line_left:hover {
+  background-color: #F53838;
+  background-image: url(../images/arrow_hover.svg);
+}
+.reviews__button_line_right {
+  top: 220px;
+  left: 960px;
+  background-image: url(../images/arrow_right.svg);
+}
+.reviews__button_line_right:hover {
+  background-color: #F53838;
+  background-image: url(../images/arrow_right_hover.svg);
 }
 
 .review {
